@@ -17,7 +17,7 @@ public class BancaItaliaServiceTest {
     BancaItaliaService bancaItaliaService = new BancaItaliaService(billbox, new AccountManager());
 
     @Before
-    @DisplayName("Insert some bills in the machine so we can test the machine")
+    @DisplayName("Insert some bills in the machine so we can test the it...")
     public void setup() throws Exception {
 
         MaintenanceService maintenanceService = new MaintenanceService(billbox);
@@ -38,7 +38,7 @@ public class BancaItaliaServiceTest {
     }
 
     @Test
-    @DisplayName("When a Francesco Acerbi (owner of 1000) is logged in and authenticated the balance of 1000 is returned")
+    @DisplayName("When a user (owner of 1000) is logged in and authenticated the balance of 1000 is returned")
     public void returnBalanceWhenLogedinAndAuthenticated() throws Exception {
 
         BancaItaliaService service = new BancaItaliaService(billbox, new AccountManager());
@@ -52,7 +52,7 @@ public class BancaItaliaServiceTest {
         class Withdrawal {
 
             @Test
-            @DisplayName("Trying to withdraw to much money should not be possible ")
+            @DisplayName("withdrawal of to much money should not be possible ")
             public void notEnoughMoney() throws Exception {
 
                 BancaItaliaService service = new BancaItaliaService(billbox, new AccountManager());
@@ -66,7 +66,7 @@ public class BancaItaliaServiceTest {
             }
 
             @Test
-            @DisplayName("1000 on account and withdraws 100 leaves 900 left")
+            @DisplayName("withdrawal of 100 when 1000 on account leaves 900 left")
             public void returnBalanceWhenLogedinAndAuthenticated() throws Exception {
 
                 MaintenanceService maintenanceService = new MaintenanceService(billbox);
